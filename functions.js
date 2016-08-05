@@ -33,6 +33,7 @@ var sum = add(a,b);
 
 console.log(sum);
 
+
 /**
  *  #3
  *  Function - subtract
@@ -100,6 +101,12 @@ console.log(checkDifference(x));
  *  stored in the variable `sum`.
  */
 
+function checkSum (X){
+	return "I can Addz " + X + " Numbers";
+}
+var x=8
+
+console.log(checkSum(x));
 
 /**
  *  #7
@@ -109,8 +116,13 @@ console.log(checkDifference(x));
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
+var x=2;
+var product=4;
+function checkProduct(result){
+	return ;
 
-
+}
+console.log (checkProduct(x));
 /**
  *  #8
  *  Function - addThenSubtract
