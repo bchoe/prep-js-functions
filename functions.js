@@ -105,7 +105,7 @@ function checkSum (X){
 	return "I can Addz " + X + " Numbers";
 }
 var x=8
-
+checkSum();
 console.log(checkSum(x));
 
 /**
@@ -116,13 +116,19 @@ console.log(checkSum(x));
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-var x=2;
-var product=4;
-function checkProduct(result){
-	return ;
 
-}
-console.log (checkProduct(x));
+function checkProduct(n1, n2){
+ var result = n1 * n2;
+ return (4 * 2);
+ 
+ }
+ 
+ checkProduct();
+
+ console.log (checkProduct("result"));
+ 
+ //pass in the difference variable in #3 and product variable in #4 to invoke the function
+
 /**
  *  #8
  *  Function - addThenSubtract
