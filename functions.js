@@ -12,7 +12,7 @@
  *  functions.
  */
 
-var a = 9
+var a = 5
 var b = 3
 
 /**
@@ -86,9 +86,7 @@ function checkDifference (X){
 	return "My football team lost " + X + " times this week";
 }
 
-var x = 16
-
-console.log(checkDifference(x));
+console.log(checkDifference(difference));
 
 
 /**
@@ -104,9 +102,8 @@ console.log(checkDifference(x));
 function checkSum (X){
 	return "I can Addz " + X + " Numbers";
 }
-var x=8
-checkSum();
-console.log(checkSum(x));
+
+console.log(checkSum(sum));
 
 /**
  *  #7
@@ -118,14 +115,11 @@ console.log(checkSum(x));
  */
 
 function checkProduct(n1, n2){
- var result = n1 * n2;
- return (4 * 2);
+ return n1 * n2;
  
  }
- 
- checkProduct();
 
- console.log (checkProduct("result"));
+ console.log(checkProduct(product, difference));
  
  //pass in the difference variable in #3 and product variable in #4 to invoke the function
 
@@ -143,6 +137,11 @@ function checkProduct(n1, n2){
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
+function addThenSubtract(n1,n2,n3){
+	return (n1+n2)-n3;
+}
+
+console.log (addThenSubtract(product, difference, sum));
 
 /**
  *  #9
@@ -155,8 +154,12 @@ function checkProduct(n1, n2){
  *
  *  Store the return of this function to a variable named `howMany`
  */
-
-
+function addThenMultiply(n1,n2,n3){
+	var sumz = n1+n2;
+	return sumz * n3;
+}
+var howMany = addThenMultiply(difference, sum, product);
+ 
 /**
  *  #10
  *  Function - createFullName
@@ -173,6 +176,16 @@ function checkProduct(n1, n2){
  */
 
 
+//or Vic's way
+
+function createFullName (firstName,lastName){
+	return firstName + ' ' + lastName;
+}
+
+var myFullName = createFullName("Grace","Hopper");
+console.log(myFullName);
+
+
 /**
  *  #11
  *  Function - verifyDrinkingAge
@@ -187,7 +200,16 @@ function checkProduct(n1, n2){
  *  **Call this function and pass in a number value.
  *  Store the return value to a variable named** `canDrinkBeer`
  */
+function verifyDrinkingAge(age){
+	if(age < 21){
+		return false;
+	}else{
+		return true;
+	}
+}
 
+var canDrinkBeer = verifyDrinkingAge(26);
+console.log(canDrinkBeer);
 
 /**
  *  #12
@@ -198,6 +220,15 @@ function checkProduct(n1, n2){
  *  "The Party will have tons of Cake!" otherwise this message
  *  should be "This Party will have an open bar".
  */
+function throwParty(){
+	if (canDrinkBeer === false){
+		return "The Party will have tons of Cake!";
+	}else{
+		return "This Party will have an open bar";
+	}
+
+}
+console.log (throwParty());
 
 
 /**
@@ -219,8 +250,11 @@ function checkProduct(n1, n2){
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
+function eatFood(firstName,lastName,food){
+	return firstName + ' ' + lastName + " loves to eat " + food;
 
-
+}
+console.log (eatFood("Grace","Hopper","Moths"));
 /**
  *  #14
  *  Function - repeater
@@ -233,3 +267,13 @@ function checkProduct(n1, n2){
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
+function repeater(num, legalAge){
+	 for(var i = 0 ;  i < num ; i++){
+		if(legalAge===true){
+			console.log ("Bacon Pancakes, makin''Bacon Pancakes...");
+		}else{
+			console.log ("Let it go... LET IT GOOOOOOoOoOoOo");
+		}
+	}
+}
+repeater(howMany, canDrinkBeer);
